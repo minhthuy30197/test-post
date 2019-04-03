@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<div class="row">
+		{{range .Posts}}
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-body">
+					<h4>{{.Title}} - {{.Author}}</h4>
+					<p>{{.Content}}</p>
+					<p>Link download:</p>
+					<ul>
+						{{ range .Links}}
+							<li><a href="{{.}}">Link</a></li>
+						{{end}}
+					</ul>
+				</div>
+			</div>
+		</div>
+		{{end}}
+	</div>
+</div>
